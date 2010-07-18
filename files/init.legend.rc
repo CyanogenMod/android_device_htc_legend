@@ -1,0 +1,123 @@
+on early-init
+    device mtd@misc 0460 radio diag
+
+# Set timeout value for rmnet stats.
+  write /sys/devices/virtual/net/rmnet0/timeout_suspend 5000000
+  write /sys/devices/virtual/net/rmnet0/timeout 18000000
+
+on init
+# btips DDB location
+    mkdir /data/btips 0777 bluetooth bluetooth
+    mkdir /data/btips/TI 0777 bluetooth bluetooth
+    mkdir /data/btips/TI/opp 0777 bluetooth bluetooth
+
+on boot
+# unmap left alt to avoid console switch
+    setkey 0x0 0x38 0x0
+# legend reset SEND+MENU+END
+    setkey 0x0 0xe7 0x706
+    setkey 0x0 0x8b 0x707
+
+    setkey 0x40 0xe7 0x706
+    setkey 0x40 0x8b 0x707
+
+    setkey 0x80 0xe7 0x706
+    setkey 0x80 0x8b 0x707
+
+    setkey 0xc0 0xe7 0x706
+    setkey 0xc0 0x8b 0x707
+    setkey 0xc0 0x6b 0x20c
+
+    mkdir /data/misc/wifi 0770 wifi wifi
+    mkdir /data/misc/wifi/sockets 0770 wifi wifi
+    mkdir /data/misc/dhcp 0770 dhcp dhcp
+    chown dhcp dhcp /data/misc/dhcp
+
+    # bluetooth power up/down interface
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
+    chmod 0660 /sys/class/rfkill/rfkill0/state
+    chown bluetooth bluetooth sys/devices/platform/msm_serial_hs.0/serial_lock_cpu
+    chmod 0660 /sys/devices/platform/msm_serial_hs.0/serial_lock_cpu
+
+    # set all crashes to bin in /data/btips with a descriptive core filename
+    # DEBUG
+    write /proc/sys/kernel/core_pattern /data/btips/core_%e_p_%p_s_%s_t_%t
+    
+    chown system system /sys/module/serial/parameters/modem_enabled
+    chown system system /dev/ttyHSUSB0
+    chown system system /dev/smd9
+
+    # for playing streaming
+    chown media media /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+
+    write /sys/module/lowmemorykiller/parameters/minfile 0,0,0,5120,5632,6144
+    write /sys/module/lowmemorykiller/parameters/check_filepages 1
+
+# compass/accelerometer daemon
+service akmd /system/bin/akmd
+    user compass
+    group compass misc input
+
+service wlan_loader /system/bin/wlan_loader \
+    -f /system/etc/wifi/Fw1273_CHIP.bin -e /proc/calibration \
+    -i /system/etc/wifi/tiwlan.ini
+    disabled
+    oneshot
+
+service ifcfg_up /system/bin/ifconfig tiwlan0 up
+    disabled
+    oneshot
+
+service wpa_supplicant /system/bin/wpa_supplicant \
+    -Dtiwlan0 -itiwlan0 -c/data/misc/wifi/wpa_supplicant.conf -dd
+    socket wpa_tiwlan0 dgram 660 wifi wifi
+    disabled
+    oneshot
+
+service dhcpcd /system/bin/dhcpcd -ABKL tiwlan0
+    disabled
+    oneshot
+
+service hciattach /system/bin/hciattach \
+    -n -s 115200 /dev/ttyHS0 texasalt 4000000 flow
+    user bluetooth
+    group bluetooth net_bt_admin
+    disabled
+
+#btips - 2.22
+service btips /system/bin/btipsd --logfile /data/btips/btips_log.txt -no_android_log
+    socket bluetooth stream 660 bluetooth bluetooth
+    socket dbus_bluetooth stream 660 bluetooth bluetooth
+    group bluetooth net_bt_admin misc
+    disabled # the MCP monitor service is responsible for bringing up the daemon
+    oneshot
+
+# bugreport is triggered by the KEY_BACK and KEY_MENU keycodes
+service bugreport /system/bin/dumpstate -d -v -o /sdcard/bugreports/bugreport
+    disabled
+    oneshot
+    keycodes 158 139
+
+service udhcpd /system/bin/udhcpd
+	disabled
+	oneshot
+
+service netsharing_on /system/bin/netsharing net on
+	disabled
+	oneshot
+
+service netsharing_off /system/bin/netsharing net off
+	disabled
+	oneshot
+	
+service modem /system/xbin/wireless_modem
+    user system
+    group system
+    disabled
+
+on property:service.modem.enable=1
+    start modem
+
+on property:service.modem.enable=0
+    stop modem
