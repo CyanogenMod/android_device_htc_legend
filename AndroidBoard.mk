@@ -94,7 +94,7 @@ $(file) : $(LOCAL_PATH)/files/init.legend.rc | $(ACP)
 	$(transform-prebuilt-to-target)
 
 include $(CLEAR_VARS)
-LOCAL_SRC_FILES := files/legend-keypad.kcm
+LOCAL_SRC_FILES := legend-keypad.kcm
 include $(BUILD_KEY_CHAR_MAP)
 
 
