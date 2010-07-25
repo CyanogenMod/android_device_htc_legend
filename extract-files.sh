@@ -19,6 +19,7 @@ cd proprietary || exit
 
 FILES="
 bin/akmd
+bin/btipsd
 bin/wpa_supplicant
 
 etc/firmware/avpr.bts
@@ -26,6 +27,7 @@ etc/firmware/fmc_init_1273.2.bts
 etc/firmware/fm_rx_init_1273.2.bts
 etc/firmware/tiinit_7.2.31.bts
 etc/firmware/vac_config.ini
+etc/firmware/wl1271.bin
 etc/firmware/yamato_pfp.fw
 etc/firmware/yamato_pm4.fw
 etc/permissions/android.hardware.camera.autofocus.xml

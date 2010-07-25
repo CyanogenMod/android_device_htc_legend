@@ -108,12 +108,14 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/files/etc/pvasflocal.cfg:system/etc/pvasflocal.cfg \
 	$(LOCAL_PATH)/files/etc/vold.conf:system/etc/vold.conf \
 	$(LOCAL_PATH)/proprietary/bin/akmd:system/bin/akmd \
+	$(LOCAL_PATH)/proprietary/bin/btipsd:system/bin/btipsd \
 	$(LOCAL_PATH)/proprietary/bin/wpa_supplicant:system/bin/wpa_supplicant \
 	$(LOCAL_PATH)/proprietary/etc/firmware/avpr.bts:system/etc/firmware/avpr.bts \
 	$(LOCAL_PATH)/proprietary/etc/firmware/fmc_init_1273.2.bts:system/etc/firmware/fmc_init_1273.2.bts \
 	$(LOCAL_PATH)/proprietary/etc/firmware/fm_rx_init_1273.2.bts:system/etc/firmware/fm_rx_init_1273.2.bts \
 	$(LOCAL_PATH)/proprietary/etc/firmware/tiinit_7.2.31.bts:system/etc/firmware/tiinit_7.2.31.bts \
 	$(LOCAL_PATH)/proprietary/etc/firmware/vac_config.ini:system/etc/firmware/vac_config.ini \
+	$(LOCAL_PATH)/proprietary/etc/firmware/wl1271.bin:system/etc/firmware/wl1271.bin \
 	$(LOCAL_PATH)/proprietary/etc/firmware/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
 	$(LOCAL_PATH)/proprietary/etc/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \
 	$(LOCAL_PATH)/proprietary/etc/permissions/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \
