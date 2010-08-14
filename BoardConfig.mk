@@ -34,6 +34,8 @@ WIFI_FIRMWARE_LOADER := wlan_loader
 WIFI_EXT_MODULE_PATH := /system/lib/modules/sdio.ko
 WIFI_EXT_MODULE_NAME := sdio
 
+BOARD_USE_HTC_USB_FUNCTION_SWITCH := true
+
 BOARD_EGL_CFG := device/htc/legend/files/egl.cfg
 
 WITH_JIT := true
