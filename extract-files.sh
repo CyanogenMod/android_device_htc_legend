@@ -30,11 +30,6 @@ etc/firmware/vac_config.ini
 etc/firmware/wl1271.bin
 etc/firmware/yamato_pfp.fw
 etc/firmware/yamato_pm4.fw
-etc/permissions/android.hardware.camera.autofocus.xml
-etc/permissions/android.hardware.sensor.light.xml
-etc/permissions/android.hardware.sensor.proximity.xml
-etc/permissions/android.hardware.telephony.gsm.xml
-etc/permissions/android.hardware.touchscreen.multitouch.xml
 etc/wifi/Fw1273_CHIP.bin
 etc/wifi/tiwlan.ini
 etc/wifi/wpa_supplicant.conf
@@ -65,7 +60,6 @@ lib/egl/libEGL_adreno200.so
 lib/egl/libGLESv1_CM_adreno200.so
 lib/egl/libGLESv2_adreno200.so
 lib/hw/gralloc.msm7k.so
-lib/hw/sensors.legend.so
 lib/modules/sdio.ko
 lib/modules/tiwlan_drv.ko
 

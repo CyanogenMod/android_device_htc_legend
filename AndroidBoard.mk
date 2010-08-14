@@ -98,15 +98,20 @@ LOCAL_SRC_FILES := legend-keypad.kcm
 include $(BUILD_KEY_CHAR_MAP)
 
 
-
-
 # other proprietary files
-
 PRODUCT_COPY_FILES += \
+	device/htc/inc/media_profiles.xml:system/etc/media_profiles.xml \
+	frameworks/base/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
+	frameworks/base/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
+	frameworks/base/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
+	frameworks/base/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
+	frameworks/base/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
+	frameworks/base/data/etc/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml \
+	frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
+	frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
 	$(LOCAL_PATH)/files/etc/fstab:system/etc/fstab \
-	$(LOCAL_PATH)/files/etc/gps.conf:system/etc/gps.conf \
 	$(LOCAL_PATH)/files/etc/pvasflocal.cfg:system/etc/pvasflocal.cfg \
-	$(LOCAL_PATH)/files/etc/vold.conf:system/etc/vold.conf \
+	$(LOCAL_PATH)/files/etc/vold.fstab:system/etc/vold.fstab \
 	$(LOCAL_PATH)/proprietary/bin/akmd:system/bin/akmd \
 	$(LOCAL_PATH)/proprietary/bin/btipsd:system/bin/btipsd \
 	$(LOCAL_PATH)/proprietary/bin/wpa_supplicant:system/bin/wpa_supplicant \
@@ -118,11 +123,6 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/etc/firmware/wl1271.bin:system/etc/firmware/wl1271.bin \
 	$(LOCAL_PATH)/proprietary/etc/firmware/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
 	$(LOCAL_PATH)/proprietary/etc/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \
-	$(LOCAL_PATH)/proprietary/etc/permissions/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \
-	$(LOCAL_PATH)/proprietary/etc/permissions/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
-	$(LOCAL_PATH)/proprietary/etc/permissions/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
-	$(LOCAL_PATH)/proprietary/etc/permissions/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
-	$(LOCAL_PATH)/proprietary/etc/permissions/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml \
 	$(LOCAL_PATH)/proprietary/etc/wifi/Fw1273_CHIP.bin:system/etc/wifi/Fw1273_CHIP.bin \
 	$(LOCAL_PATH)/proprietary/etc/wifi/tiwlan.ini:system/etc/wifi/tiwlan.ini \
 	$(LOCAL_PATH)/proprietary/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
@@ -152,7 +152,6 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/lib/egl/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \
 	$(LOCAL_PATH)/proprietary/lib/egl/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \
 	$(LOCAL_PATH)/proprietary/lib/hw/gralloc.msm7k.so:system/lib/hw/gralloc.msm7k.so \
-	$(LOCAL_PATH)/proprietary/lib/hw/sensors.legend.so:system/lib/hw/sensors.legend.so \
 	$(LOCAL_PATH)/proprietary/lib/modules/sdio.ko:system/lib/modules/sdio.ko \
 	$(LOCAL_PATH)/proprietary/lib/modules/tiwlan_drv.ko:system/lib/modules/tiwlan_drv.ko \
 	$(LOCAL_PATH)/proprietary/lib/libaudioeq.so:system/lib/libaudioeq.so \
