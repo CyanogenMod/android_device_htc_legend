@@ -85,7 +85,6 @@ lib/libomx_wmvdec_sharedlibrary.so
 lib/libpvasfcommon.so
 lib/libpvasflocalpbreg.so
 lib/libpvasflocalpb.so
-lib/libspeech.so
 "
 
 

@@ -169,5 +169,4 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/lib/libomx_wmvdec_sharedlibrary.so:system/lib/libomx_wmvdec_sharedlibrary.so \
 	$(LOCAL_PATH)/proprietary/lib/libpvasfcommon.so:system/lib/libpvasfcommon.so \
 	$(LOCAL_PATH)/proprietary/lib/libpvasflocalpbreg.so:system/lib/libpvasflocalpbreg.so \
-	$(LOCAL_PATH)/proprietary/lib/libpvasflocalpb.so:system/lib/libpvasflocalpb.so \
-	$(LOCAL_PATH)/proprietary/lib/libspeech.so:system/lib/libspeech.so
+	$(LOCAL_PATH)/proprietary/lib/libpvasflocalpb.so:system/lib/libpvasflocalpb.so
