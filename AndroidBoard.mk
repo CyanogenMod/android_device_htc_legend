@@ -154,6 +154,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/lib/hw/gralloc.msm7k.so:system/lib/hw/gralloc.msm7k.so \
 	$(LOCAL_PATH)/proprietary/lib/modules/sdio.ko:system/lib/modules/sdio.ko \
 	$(LOCAL_PATH)/proprietary/lib/modules/tiwlan_drv.ko:system/lib/modules/tiwlan_drv.ko \
+	$(LOCAL_PATH)/files/modules/tun.ko:system/lib/modules/tun.ko \
 	$(LOCAL_PATH)/proprietary/lib/libaudioeq.so:system/lib/libaudioeq.so \
 	$(LOCAL_PATH)/proprietary/lib/libAudioTrimmer.so:system/lib/libAudioTrimmer.so \
 	$(LOCAL_PATH)/proprietary/lib/libgsl.so:system/lib/libgsl.so \
