@@ -54,6 +54,10 @@ on boot
     write /sys/module/lowmemorykiller/parameters/minfile 0,0,0,5120,5632,6144
     write /sys/module/lowmemorykiller/parameters/check_filepages 1
 
+    # flashlight
+    chown system camera /sys/devices/platform/flashlight.0/leds/flashlight/brightness
+    chmod 0660 /sys/devices/platform/flashlight.0/leds/flashlight/brightness
+
 # compass/accelerometer daemon
 service akmd /system/bin/akmd
     user compass
