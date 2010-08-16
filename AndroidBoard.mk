@@ -112,6 +112,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/files/etc/fstab:system/etc/fstab \
 	$(LOCAL_PATH)/files/etc/pvasflocal.cfg:system/etc/pvasflocal.cfg \
 	$(LOCAL_PATH)/files/etc/vold.fstab:system/etc/vold.fstab \
+	$(LOCAL_PATH)/files/etc/media_profiles.xml:system/etc/media_profiles.xml \
 	$(LOCAL_PATH)/proprietary/bin/akmd:system/bin/akmd \
 	$(LOCAL_PATH)/proprietary/bin/btipsd:system/bin/btipsd \
 	$(LOCAL_PATH)/proprietary/bin/wpa_supplicant:system/bin/wpa_supplicant \
