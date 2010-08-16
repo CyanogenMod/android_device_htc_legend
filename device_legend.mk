@@ -11,7 +11,6 @@ WITH_WINDOWS_MEDIA := true
 
 PRODUCT_LOCALES += mdpi
 
-#TODO: add Torch to packages once the framework is done in CM
 PRODUCT_PACKAGES += \
     librs_jni \
     lights.legend \
