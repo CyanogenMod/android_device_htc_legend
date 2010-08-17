@@ -130,19 +130,16 @@ static const struct sensor_t sSensorList[] = {
                 SENSOR_TYPE_LIGHT, 1023.0f, 1.0f, 0.5f, { } },
 };
 
-static const float sLuxValues[13] = {
-    11.0,
-    41.0,
-    61.0,
-    101.0,
-    201.0,
-    301.0,
-    401.0,
-    501.0,
-    601.0,
-    701.0,
-    801.0,
-    901.0,
+static const float sLuxValues[10] = {
+	0.0,
+    33.0,
+    77.0,
+    220.0,
+    308.0,
+    397.0,
+    485.0,
+    698.0,
+    860.0,
     1023.0
 };
 
