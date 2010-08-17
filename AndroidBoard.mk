@@ -100,7 +100,6 @@ include $(BUILD_KEY_CHAR_MAP)
 
 # other proprietary files
 PRODUCT_COPY_FILES += \
-	device/htc/inc/media_profiles.xml:system/etc/media_profiles.xml \
 	frameworks/base/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
 	frameworks/base/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
 	frameworks/base/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
@@ -109,10 +108,10 @@ PRODUCT_COPY_FILES += \
 	frameworks/base/data/etc/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml \
 	frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
 	frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
+	$(LOCAL_PATH)/files/etc/media_profiles.xml:system/etc/media_profiles.xml \
 	$(LOCAL_PATH)/files/etc/fstab:system/etc/fstab \
 	$(LOCAL_PATH)/files/etc/pvasflocal.cfg:system/etc/pvasflocal.cfg \
 	$(LOCAL_PATH)/files/etc/vold.fstab:system/etc/vold.fstab \
-	$(LOCAL_PATH)/files/etc/media_profiles.xml:system/etc/media_profiles.xml \
 	$(LOCAL_PATH)/proprietary/bin/akmd:system/bin/akmd \
 	$(LOCAL_PATH)/proprietary/bin/btipsd:system/bin/btipsd \
 	$(LOCAL_PATH)/proprietary/bin/wpa_supplicant:system/bin/wpa_supplicant \

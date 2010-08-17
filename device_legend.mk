@@ -9,10 +9,9 @@ DEVICE_PACKAGE_OVERLAYS := device/htc/legend/overlay
 
 WITH_WINDOWS_MEDIA := true
 
-PRODUCT_LOCALES += mdpi
+PRODUCT_LOCALES += de_AT de_CH mdpi
 
 PRODUCT_PACKAGES += \
-    librs_jni \
     lights.legend \
     sensors.legend
 
