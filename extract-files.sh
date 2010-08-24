@@ -49,6 +49,7 @@ etc/WP_0407GER.db
 etc/WP_0408GRK.db
 etc/WP_0409WWE.db
 etc/WP_0410ITA.db
+etc/WP_0412KOR.db
 etc/WP_0413NLD.db
 etc/WP_0414NOR.db
 etc/WP_0415PLK.db

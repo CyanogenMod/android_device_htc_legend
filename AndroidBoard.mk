@@ -142,6 +142,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/etc/WP_0408GRK.db:system/etc/WP_0408GRK.db \
 	$(LOCAL_PATH)/proprietary/etc/WP_0409WWE.db:system/etc/WP_0409WWE.db \
 	$(LOCAL_PATH)/proprietary/etc/WP_0410ITA.db:system/etc/WP_0410ITA.db \
+	$(LOCAL_PATH)/proprietary/etc/WP_0412KOR.db:system/etc/WP_0412KOR.db \
 	$(LOCAL_PATH)/proprietary/etc/WP_0413NLD.db:system/etc/WP_0413NLD.db \
 	$(LOCAL_PATH)/proprietary/etc/WP_0414NOR.db:system/etc/WP_0414NOR.db \
 	$(LOCAL_PATH)/proprietary/etc/WP_0415PLK.db:system/etc/WP_0415PLK.db \

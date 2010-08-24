@@ -7,8 +7,6 @@ $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
 DEVICE_PACKAGE_OVERLAYS := device/htc/legend/overlay
 
-WITH_WINDOWS_MEDIA := true
-
 PRODUCT_LOCALES += de_AT de_CH mdpi
 
 PRODUCT_PACKAGES += \
@@ -28,6 +26,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 	PRIVATE_BUILD_DESC="legend-user 2.2 FRF91 43546 release-keys"
 
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
+    ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
+    ro.com.android.wifi-watchlist=GoogleGuest \
     ro.setupwizard.enterprise_mode=1 \
     ro.setupwizard.enable_bypass=1 \
     ro.com.android.dateformat=MM-dd-yyyy \
