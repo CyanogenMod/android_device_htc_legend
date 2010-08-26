@@ -3,9 +3,14 @@
 #
 
 TARGET_BOARD_PLATFORM := msm7k
-TARGET_CPU_ABI := armeabi
+TARGET_ARCH_VARIANT := armv5te-vfp
+TARGET_CPU_ABI := armeabi-v6l
+TARGET_CPU_ABI2 := armeabi
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 TARGET_BOOTLOADER_BOARD_NAME := legend
+
+WITH_JIT := true
+ENABLE_JSC_JIT := true
 
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
@@ -21,7 +26,7 @@ BOARD_VENDOR_USE_AKMD := akm8973
 BOARD_HAVE_BLUETOOTH := true
 BOARD_BLUETOOTH_SERVICE := btips
 
-BOARD_GPS_LIBRARIES := libgps
+BOARD_GPS_LIBRARIES := libgps librpc
 
 USE_CAMERA_STUB := false
 BOARD_USES_ECLAIR_LIBCAMERA := true
@@ -37,9 +42,6 @@ WIFI_EXT_MODULE_NAME := sdio
 BOARD_USE_HTC_USB_FUNCTION_SWITCH := true
 
 BOARD_EGL_CFG := device/htc/legend/files/egl.cfg
-
-WITH_JIT := true
-ENABLE_JSC_JIT := true
 
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
 BOARD_KERNEL_BASE := 0x12C00000
