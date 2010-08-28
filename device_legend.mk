@@ -7,7 +7,7 @@ $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
 DEVICE_PACKAGE_OVERLAYS := device/htc/legend/overlay
 
-PRODUCT_LOCALES += de_AT de_CH mdpi
+PRODUCT_LOCALES += mdpi
 
 PRODUCT_PACKAGES += \
     lights.legend \
