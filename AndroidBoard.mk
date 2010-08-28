@@ -1,21 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 
 
-# kernel
-
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/files/kernel
-endif
-
-file := $(INSTALLED_KERNEL_TARGET)
-ALL_PREBUILT += $(file)
-$(file): $(TARGET_PREBUILT_KERNEL) | $(ACP)
-	$(transform-prebuilt-to-target)
-
-
-
-
-
 # shared libs
 
 include $(CLEAR_VARS)
@@ -108,6 +93,7 @@ PRODUCT_COPY_FILES += \
 	frameworks/base/data/etc/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml \
 	frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
 	frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
+	$(TARGET_PREBUILT_KERNEL):kernel \
 	$(LOCAL_PATH)/files/etc/media_profiles.xml:system/etc/media_profiles.xml \
 	$(LOCAL_PATH)/files/etc/fstab:system/etc/fstab \
 	$(LOCAL_PATH)/files/etc/pvasflocal.cfg:system/etc/pvasflocal.cfg \

@@ -45,6 +45,7 @@ BOARD_EGL_CFG := device/htc/legend/files/egl.cfg
 
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
 BOARD_KERNEL_BASE := 0x12C00000
+TARGET_PREBUILT_KERNEL := device/htc/legend/files/kernel
 
 BOARD_RECOVERYIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x00460000)
 BOARD_BOOTIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x00280000)
