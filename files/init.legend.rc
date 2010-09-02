@@ -48,9 +48,6 @@ on boot
     chown system system /dev/ttyHSUSB0
     chown system system /dev/smd9
 
-    # for playing streaming
-    chown media media /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-
     write /sys/module/lowmemorykiller/parameters/minfile 0,0,0,5120,5632,6144
     write /sys/module/lowmemorykiller/parameters/check_filepages 1
 
@@ -74,7 +71,7 @@ service ifcfg_up /system/bin/ifconfig tiwlan0 up
     oneshot
 
 service wpa_supplicant /system/bin/wpa_supplicant \
-    -Dtiwlan0 -itiwlan0 -c/data/misc/wifi/wpa_supplicant.conf -dd
+    -Dtiwlan0 -itiwlan0 -c/data/misc/wifi/wpa_supplicant.conf -q
     socket wpa_tiwlan0 dgram 660 wifi wifi
     disabled
     oneshot
@@ -102,26 +99,3 @@ service bugreport /system/bin/dumpstate -d -v -o /sdcard/bugreports/bugreport
     disabled
     oneshot
     keycodes 158 139
-
-service udhcpd /system/bin/udhcpd
-	disabled
-	oneshot
-
-service netsharing_on /system/bin/netsharing net on
-	disabled
-	oneshot
-
-service netsharing_off /system/bin/netsharing net off
-	disabled
-	oneshot
-	
-service modem /system/xbin/wireless_modem
-    user system
-    group system
-    disabled
-
-on property:service.modem.enable=1
-    start modem
-
-on property:service.modem.enable=0
-    stop modem
