@@ -263,6 +263,7 @@ be empty. An example would be "usb.*" -->
     <item>"foo\\d"</item> to the array -->
     <string-array translatable="false" name="config_tether_upstream_regexs">
         <item>"rmnet\\d"</item>
+        <item>"tiwlan\\d"</item>
     </string-array>
 
 <!-- TODO -->
