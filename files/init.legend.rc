@@ -98,4 +98,4 @@ service btips /system/bin/btipsd --logfile /data/btips/btips_log.txt -no_android
 service bugreport /system/bin/dumpstate -d -v -o /sdcard/bugreports/bugreport
     disabled
     oneshot
-    keycodes 158 139
+#    keycodes 158 139
