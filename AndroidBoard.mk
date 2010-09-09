@@ -141,6 +141,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/proprietary/lib/hw/gralloc.msm7k.so:system/lib/hw/gralloc.msm7k.so \
 	$(LOCAL_PATH)/proprietary/lib/modules/sdio.ko:system/lib/modules/sdio.ko \
 	$(LOCAL_PATH)/proprietary/lib/modules/tiwlan_drv.ko:system/lib/modules/tiwlan_drv.ko \
+	$(LOCAL_PATH)/files/modules/cifs.ko:system/lib/modules/cifs.ko \
 	$(LOCAL_PATH)/files/modules/tun.ko:system/lib/modules/tun.ko \
 	$(LOCAL_PATH)/files/modules/ramzswap.ko:system/lib/modules/ramzswap.ko \
 	$(LOCAL_PATH)/proprietary/lib/libaudioeq.so:system/lib/libaudioeq.so \
