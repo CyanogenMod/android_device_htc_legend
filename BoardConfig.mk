@@ -1,6 +1,30 @@
+# Copyright (C) 2007 The Android Open Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# config.mk
 #
 # Product-specific compile-time definitions.
 #
+
+# WARNING: This line must come *before* including the proprietary
+# variant, so that it gets overwritten by the parent (which goes
+# against the traditional rules of inheritance).
+USE_CAMERA_STUB := true
+
+# inherit from the proprietary version
+-include vendor/htc/legend/BoardConfigVendor.mk
+
 
 TARGET_BOARD_PLATFORM := msm7k
 TARGET_ARCH_VARIANT := armv5te-vfp
@@ -8,9 +32,6 @@ TARGET_CPU_ABI := armeabi-v6l
 TARGET_CPU_ABI2 := armeabi
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 TARGET_BOOTLOADER_BOARD_NAME := legend
-
-WITH_JIT := true
-ENABLE_JSC_JIT := true
 
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
@@ -26,9 +47,6 @@ BOARD_VENDOR_USE_AKMD := akm8973
 BOARD_HAVE_BLUETOOTH := true
 BOARD_BLUETOOTH_SERVICE := btips
 
-BOARD_GPS_LIBRARIES := libgps librpc
-
-USE_CAMERA_STUB := false
 BOARD_USES_ECLAIR_LIBCAMERA := true
 
 BOARD_WLAN_TI_STA_DK_ROOT := system/wlan/ti/wilink_6_1
