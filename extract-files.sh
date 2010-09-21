@@ -3,7 +3,6 @@
 DIRS="
 bin
 etc/firmware
-etc/permissions
 etc/wifi
 lib/egl
 lib/hw
@@ -16,7 +15,6 @@ done
 FILES="
 bin/akmd
 bin/btipsd
-bin/wpa_supplicant
 
 etc/firmware/avpr.bts
 etc/firmware/fmc_init_1273.2.bts
@@ -28,7 +26,6 @@ etc/firmware/yamato_pfp.fw
 etc/firmware/yamato_pm4.fw
 etc/wifi/Fw1273_CHIP.bin
 etc/wifi/tiwlan.ini
-etc/wifi/wpa_supplicant.conf
 etc/agps_rm
 etc/AudioFilter.csv
 etc/AudioPara4.csv
@@ -96,7 +93,6 @@ PRODUCT_COPY_FILES := \\
 PRODUCT_COPY_FILES += \\
     vendor/htc/legend/proprietary/bin/akmd:system/bin/akmd \\
     vendor/htc/legend/proprietary/bin/btipsd:system/bin/btipsd \\
-    vendor/htc/legend/proprietary/bin/wpa_supplicant:system/bin/wpa_supplicant \\
     vendor/htc/legend/proprietary/etc/firmware/avpr.bts:system/etc/firmware/avpr.bts \\
     vendor/htc/legend/proprietary/etc/firmware/fmc_init_1273.2.bts:system/etc/firmware/fmc_init_1273.2.bts \\
     vendor/htc/legend/proprietary/etc/firmware/fm_rx_init_1273.2.bts:system/etc/firmware/fm_rx_init_1273.2.bts \\
@@ -107,7 +103,6 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/legend/proprietary/etc/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \\
     vendor/htc/legend/proprietary/etc/wifi/Fw1273_CHIP.bin:system/etc/wifi/Fw1273_CHIP.bin \\
     vendor/htc/legend/proprietary/etc/wifi/tiwlan.ini:system/etc/wifi/tiwlan.ini \\
-    vendor/htc/legend/proprietary/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \\
     vendor/htc/legend/proprietary/etc/agps_rm:system/etc/agps_rm \\
     vendor/htc/legend/proprietary/etc/AudioFilter.csv:system/etc/AudioFilter.csv \\
     vendor/htc/legend/proprietary/etc/AudioPara4.csv:system/etc/AudioPara4.csv \\
