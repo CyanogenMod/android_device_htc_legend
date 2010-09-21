@@ -5,7 +5,6 @@ bin
 etc/firmware
 etc/wifi
 lib/egl
-lib/hw
 "
 
 for DIR in $DIRS; do
@@ -37,7 +36,6 @@ etc/AudioPreProcess.csv
 lib/egl/libEGL_adreno200.so
 lib/egl/libGLESv1_CM_adreno200.so
 lib/egl/libGLESv2_adreno200.so
-lib/hw/gralloc.msm7k.so
 
 lib/libaudioeq.so
 lib/libAudioTrimmer.so
@@ -113,7 +111,6 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/legend/proprietary/lib/egl/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \\
     vendor/htc/legend/proprietary/lib/egl/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \\
     vendor/htc/legend/proprietary/lib/egl/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \\
-    vendor/htc/legend/proprietary/lib/hw/gralloc.msm7k.so:system/lib/hw/gralloc.msm7k.so \\
     vendor/htc/legend/proprietary/lib/libaudioeq.so:system/lib/libaudioeq.so \\
     vendor/htc/legend/proprietary/lib/libAudioTrimmer.so:system/lib/libAudioTrimmer.so \\
     vendor/htc/legend/proprietary/lib/libgsl.so:system/lib/libgsl.so \\
