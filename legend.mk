@@ -106,7 +106,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     device/htc/legend/files/modules/cifs.ko:system/lib/modules/cifs.ko \
-    device/htc/legend/files/modules/tun.ko:system/lib/modules/tun.ko \
     device/htc/legend/files/modules/ramzswap.ko:system/lib/modules/ramzswap.ko \
     device/htc/legend/files/modules/sdio.ko:system/lib/modules/sdio.ko \
     device/htc/legend/files/modules/tiwlan_drv.ko:system/lib/modules/tiwlan_drv.ko
