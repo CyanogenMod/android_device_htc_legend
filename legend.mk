@@ -64,6 +64,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapsize=32m
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dexopt-data-only=1
+
 # Should make scrolling smoother
 #PRODUCT_PROPERTY_OVERRIDES += \
 #    windowsmgr.max_events_per_sec=60
