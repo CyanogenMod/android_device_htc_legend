@@ -18,9 +18,10 @@
         version 1 - initial version.
         version 2 - added recipientLimit.
         version 3 - added min/max recycler values.
+        version 4 - added sms to mms text threshold.
 -->
 
-<mms_config version="3">
+<mms_config version="4">
     <!-- Maximum message size in bytes for a MMS message -->
     <int name="maxMessageSize">1048576</int>
 
@@ -35,5 +36,4 @@
 
     <!-- UAProf URL -->
     <string name="uaProfUrl">http://www.htcmms.com.tw/Android/Common/legend/ua-profile.xml</string>
-
 </mms_config>
