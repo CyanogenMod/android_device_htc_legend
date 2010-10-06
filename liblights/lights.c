@@ -249,7 +249,7 @@ static int open_lights(const struct hw_module_t* module, char const* name,
         set_light = set_light_notifications;
     }
     else if (0 == strcmp(LIGHT_ID_ATTENTION, name)) {
-        set_light = set_light_notifications;
+        // ignore attention light
     }
     else {
         return -EINVAL;
