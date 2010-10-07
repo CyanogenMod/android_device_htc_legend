@@ -182,9 +182,6 @@ set_light_battery(struct light_device_t* dev,
     amberstate = status;
     amberblink = state->flashMode;
 
-    /*LOGD("set_light_battery state=%d, color=%d, red=%d, green=%d\n",
-            status, state->color, red, green); */
-
     pthread_mutex_lock(&g_lock);
     set_light_locked(LED_AMBER, status, state->flashMode);
     pthread_mutex_unlock(&g_lock);
@@ -192,7 +189,7 @@ set_light_battery(struct light_device_t* dev,
 }
 
 static int
-set_light_notifications(struct light_device_t* dev,
+set_light_notification(struct light_device_t* dev,
         struct light_state_t const* state)
 {
     int status = (state->color >> 8) & 0xFF;
@@ -203,14 +200,19 @@ set_light_notifications(struct light_device_t* dev,
     greenstate = status;
     greenblink = state->flashMode;
 
-    /* LOGD("set_light_notifications state=%d, color=%d\n", status, state->color); */
-
     pthread_mutex_lock(&g_lock);
     set_light_locked(LED_GREEN, status, state->flashMode);
     pthread_mutex_unlock(&g_lock);
     return 0;
 }
 
+static int
+set_light_attention(struct light_device_t* dev,
+        struct light_state_t const* state)
+{
+    // Legend doesn't have an attention light
+    return 0;
+}
 
 /** Close the lights device */
 static int
@@ -246,10 +248,10 @@ static int open_lights(const struct hw_module_t* module, char const* name,
         set_light = set_light_battery;
     }
     else if (0 == strcmp(LIGHT_ID_NOTIFICATIONS, name)) {
-        set_light = set_light_notifications;
+        set_light = set_light_notification;
     }
     else if (0 == strcmp(LIGHT_ID_ATTENTION, name)) {
-        // ignore attention light
+        set_light = set_light_attention;
     }
     else {
         return -EINVAL;
