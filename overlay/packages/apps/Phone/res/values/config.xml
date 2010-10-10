@@ -19,5 +19,4 @@
 <resources>
     <bool name="allow_in_call_touch_ui">true</bool>
     <bool name="allow_back_key_to_reject_incoming_call">false</bool>
-    <bool name="send_mic_mute_to_AudioManager">true</bool>
 </resources>
