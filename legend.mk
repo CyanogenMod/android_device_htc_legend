@@ -49,7 +49,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.disable.fd.plmn.prefix=23402,23410,23411 \
     ro.ril.enable.sdr=0 \
     ro.ril.enable.a52.HTC-ITA=1 \
-    ro.ril.enable.a53.HTC-ITA=1
+    ro.ril.enable.a53.HTC-ITA=1 \
+    ro.opengles.version=131072
 
 # Default network type.
 # 0 => WCDMA preferred.
