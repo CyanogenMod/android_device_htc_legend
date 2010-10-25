@@ -109,7 +109,6 @@ PRODUCT_COPY_FILES += \
     device/htc/legend/files/etc/vold.fstab:system/etc/vold.fstab
 
 PRODUCT_COPY_FILES += \
-    device/htc/legend/files/modules/ramzswap.ko:system/lib/modules/ramzswap.ko \
     device/htc/legend/files/modules/sdio.ko:system/lib/modules/sdio.ko \
     device/htc/legend/files/modules/tiwlan_drv.ko:system/lib/modules/tiwlan_drv.ko
     
