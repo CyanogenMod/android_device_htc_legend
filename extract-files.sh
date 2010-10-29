@@ -52,7 +52,6 @@ lib/libObexJniWrapper.so
 lib/libOlaBase.so
 lib/libOmxH264Dec.so
 lib/libOmxMpeg4Dec.so
-lib/libOmxVidEnc.so
 lib/liboemcamera.so
 lib/libomx_wmadec_sharedlibrary.so
 lib/libomx_wmvdec_sharedlibrary.so
@@ -126,7 +125,6 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/legend/proprietary/lib/libObexJniWrapper.so:system/lib/libObexJniWrapper.so \\
     vendor/htc/legend/proprietary/lib/libOlaBase.so:system/lib/libOlaBase.so \\
     vendor/htc/legend/proprietary/lib/libOmxH264Dec.so:system/lib/libOmxH264Dec.so \\
-    vendor/htc/legend/proprietary/lib/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \\
     vendor/htc/legend/proprietary/lib/libOmxMpeg4Dec.so:system/lib/libOmxMpeg4Dec.so \\
     vendor/htc/legend/proprietary/lib/libomx_wmadec_sharedlibrary.so:system/lib/libomx_wmadec_sharedlibrary.so \\
     vendor/htc/legend/proprietary/lib/libomx_wmvdec_sharedlibrary.so:system/lib/libomx_wmvdec_sharedlibrary.so \\
