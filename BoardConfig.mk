@@ -58,6 +58,7 @@ WIFI_EXT_MODULE_NAME := sdio
 
 BOARD_USE_HTC_USB_FUNCTION_SWITCH := true
 BOARD_USE_NASTY_PTHREAD_CREATE_HACK := true
+BOARD_USE_NEW_LIBRIL_HTC := true
 
 BOARD_EGL_CFG := device/htc/legend/files/egl.cfg
 
