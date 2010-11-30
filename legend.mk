@@ -111,9 +111,25 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/legend/files/modules/sdio.ko:system/lib/modules/sdio.ko \
     device/htc/legend/files/modules/tiwlan_drv.ko:system/lib/modules/tiwlan_drv.ko \
-    device/htc/legend/files/modules/cifs.ko:system/lib/modules/cifs.ko \
-    device/htc/legend/files/modules/aufs.ko:system/lib/modules/aufs.ko
-    
+    device/htc/legend/files/modules/tiap_drv.ko:system/lib/modules/tiap_drv.ko
+
+PRODUCT_COPY_FILES += \
+    device/htc/legend/files/modules/2.6.32.17-cyanogenmod/kernel/fs/aufs/aufs.ko:system/lib/modules/2.6.32.17-cyanogenmod/kernel/fs/aufs/aufs.ko \
+    device/htc/legend/files/modules/2.6.32.17-cyanogenmod/kernel/fs/cifs/cifs.ko:system/lib/modules/2.6.32.17-cyanogenmod/kernel/fs/cifs/cifs.ko \
+    device/htc/legend/files/modules/2.6.32.17-cyanogenmod/kernel/net/ipv6/ipv6.ko:system/lib/modules/2.6.32.17-cyanogenmod/kernel/net/ipv6/ipv6.ko \
+    device/htc/legend/files/modules/2.6.32.17-cyanogenmod/modules.alias:system/lib/modules/2.6.32.17-cyanogenmod/modules.alias \
+    device/htc/legend/files/modules/2.6.32.17-cyanogenmod/modules.alias.bin:system/lib/modules/2.6.32.17-cyanogenmod/modules.alias.bin \
+    device/htc/legend/files/modules/2.6.32.17-cyanogenmod/modules.dep:system/lib/modules/2.6.32.17-cyanogenmod/modules.dep \
+    device/htc/legend/files/modules/2.6.32.17-cyanogenmod/modules.dep.bin:system/lib/modules/2.6.32.17-cyanogenmod/modules.dep.bin \
+    device/htc/legend/files/modules/2.6.32.17-cyanogenmod/modules.devname:system/lib/modules/2.6.32.17-cyanogenmod/modules.devname \
+    device/htc/legend/files/modules/2.6.32.17-cyanogenmod/modules.order:system/lib/modules/2.6.32.17-cyanogenmod/modules.order \
+    device/htc/legend/files/modules/2.6.32.17-cyanogenmod/modules.softdep:system/lib/modules/2.6.32.17-cyanogenmod/modules.softdep \
+    device/htc/legend/files/modules/2.6.32.17-cyanogenmod/modules.symbols:system/lib/modules/2.6.32.17-cyanogenmod/modules.symbols \
+    device/htc/legend/files/modules/2.6.32.17-cyanogenmod/modules.symbols.bin:system/lib/modules/2.6.32.17-cyanogenmod/modules.symbols.bin
+
+PRODUCT_COPY_FILES += \
+    device/htc/legend/files/hw/gralloc.msm7k.so:/system/lib/hw/gralloc.msm7k.so
+
 PRODUCT_PACKAGES += \
     librs_jni \
     sensors.legend \
