@@ -111,8 +111,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/legend/files/modules/sdio.ko:system/lib/modules/sdio.ko \
     device/htc/legend/files/modules/tiwlan_drv.ko:system/lib/modules/tiwlan_drv.ko \
+    device/htc/legend/files/modules/tiap_drv.ko:system/lib/modules/tiap_drv.ko \
     device/htc/legend/files/modules/cifs.ko:system/lib/modules/cifs.ko \
-    device/htc/legend/files/modules/aufs.ko:system/lib/modules/aufs.ko
+    device/htc/legend/files/modules/aufs.ko:system/lib/modules/aufs.ko \
+    device/htc/legend/files/modules/aufs.ko:system/lib/modules/ipv6.ko
     
 PRODUCT_PACKAGES += \
     librs_jni \
