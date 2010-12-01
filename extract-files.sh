@@ -13,7 +13,6 @@ done
 
 FILES="
 bin/akmd
-bin/btipsd
 
 etc/firmware/avpr.bts
 etc/firmware/fmc_init_1273.2.bts
@@ -24,7 +23,11 @@ etc/firmware/wl1271.bin
 etc/firmware/yamato_pfp.fw
 etc/firmware/yamato_pm4.fw
 etc/wifi/Fw1273_CHIP.bin
+etc/wifi/Fw1273_CHIP_AP.bin
+etc/wifi/hostapd.conf
 etc/wifi/tiwlan.ini
+etc/wifi/tiwlan_ap.ini
+
 etc/agps_rm
 etc/AudioFilter.csv
 etc/AudioPara4.csv
@@ -88,7 +91,6 @@ PRODUCT_COPY_FILES := \\
 
 PRODUCT_COPY_FILES += \\
     vendor/htc/legend/proprietary/bin/akmd:system/bin/akmd \\
-    vendor/htc/legend/proprietary/bin/btipsd:system/bin/btipsd \\
     vendor/htc/legend/proprietary/etc/firmware/avpr.bts:system/etc/firmware/avpr.bts \\
     vendor/htc/legend/proprietary/etc/firmware/fmc_init_1273.2.bts:system/etc/firmware/fmc_init_1273.2.bts \\
     vendor/htc/legend/proprietary/etc/firmware/fm_rx_init_1273.2.bts:system/etc/firmware/fm_rx_init_1273.2.bts \\
@@ -98,13 +100,14 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/legend/proprietary/etc/firmware/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \\
     vendor/htc/legend/proprietary/etc/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \\
     vendor/htc/legend/proprietary/etc/wifi/Fw1273_CHIP.bin:system/etc/wifi/Fw1273_CHIP.bin \\
+    vendor/htc/legend/proprietary/etc/wifi/Fw1273_CHIP_AP.bin:system/etc/wifi/Fw1273_CHIP_AP.bin \\
+    vendor/htc/legend/proprietary/etc/wifi/hostapd.conf:system/etc/wifi/hostapd.conf \\
     vendor/htc/legend/proprietary/etc/wifi/tiwlan.ini:system/etc/wifi/tiwlan.ini \\
+    vendor/htc/legend/proprietary/etc/wifi/tiwlan_ap.ini:system/etc/wifi/tiwlan_ap.ini \\
     vendor/htc/legend/proprietary/etc/agps_rm:system/etc/agps_rm \\
     vendor/htc/legend/proprietary/etc/AudioFilter.csv:system/etc/AudioFilter.csv \\
     vendor/htc/legend/proprietary/etc/AudioPara4.csv:system/etc/AudioPara4.csv \\
     vendor/htc/legend/proprietary/etc/AudioPara4_WB.csv:system/etc/AudioPara4_WB.csv \\
-    vendor/htc/legend/proprietary/etc/AudioPara_HTC_FR.csv:system/etc/AudioPara_HTC_FR.csv \\
-    vendor/htc/legend/proprietary/etc/AudioPara_HTC_WB_FR.csv:system/etc/AudioPara_HTC_WB_FR.csv \\
     vendor/htc/legend/proprietary/etc/AudioPreProcess.csv:system/etc/AudioPreProcess.csv \\
     vendor/htc/legend/proprietary/etc/WPDB.zip:system/etc/WPDB.zip \\
     vendor/htc/legend/proprietary/lib/egl/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \\
