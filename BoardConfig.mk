@@ -39,9 +39,14 @@ TARGET_NO_RECOVERY := true
 
 BOARD_USES_QCOM_LIBS := true
 BOARD_USES_GENERIC_AUDIO := false
+BOARD_USE_FROYO_LIBCAMERA := true
 
-BOARD_VENDOR_QCOM_AMSS_VERSION := 4735
-BOARD_VENDOR_USE_AKMD := akm8973
+#BOARD_VENDOR_QCOM_AMSS_VERSION := 4735
+#BOARD_VENDOR_USE_AKMD := akm8973
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := mahimahi
+BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 3200
+
+BOARD_NO_RGBX_8888 := true
 
 BOARD_HAVE_BLUETOOTH := true
 #BOARD_BLUETOOTH_SERVICE := btips
@@ -63,7 +68,6 @@ BOARD_EGL_CFG := device/htc/legend/files/egl.cfg
 
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
 BOARD_KERNEL_BASE := 0x12C00000
-TARGET_PREBUILT_KERNEL := device/htc/legend/files/kernel
 
 BOARD_RECOVERYIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x00460000)
 BOARD_BOOTIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x00280000)
@@ -72,7 +76,7 @@ BOARD_USERDATAIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x0b920000)
 
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_RECOVERY_UI_LIB := librecovery_ui_legend librecovery_ui_htc
+#TARGET_RECOVERY_UI_LIB := librecovery_ui_legend librecovery_ui_htc TODO
 
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
