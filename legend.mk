@@ -14,6 +14,22 @@
 # limitations under the License.
 #
 
+#TODO
+#PRODUCT_COPY_FILES += \
+#    device/htc/legend/RomManager.apk:system/app/RomManager.apk \
+#    device/htc/legend/apns-conf.xml:system/etc/apns-conf.xml \
+#    device/htc/legend/libmm-omxcore.so:system/lib \
+#    device/htc/legend/libOmxCore.so:system/lib
+
+PRODUCT_PACKAGES += \
+    wpa_supplicant.conf \
+    tiwlan.ini \
+    dhcpcd.conf \
+    wlan_cu \
+    wlan_loader \
+    libCustomWifi
+#TODO
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Kernel Targets
@@ -22,6 +38,8 @@ ifeq ($(TARGET_KERNEL_CONFIG),)
 TARGET_PREBUILT_KERNEL := device/htc/legend/files/kernel
 endif # TARGET_KERNEL_CONFIG
 endif # TARGET_PREBUILT_KERNEL
+
+PRODUCT_COPY_FILES += $(TARGET_PREBUILT_KERNEL):kernel
 
 DEVICE_PACKAGE_OVERLAYS := device/htc/legend/overlay
 
@@ -35,7 +53,8 @@ PRODUCT_COPY_FILES += \
     device/htc/legend/files/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl
 
 PRODUCT_COPY_FILES += \
-    device/htc/legend/files/init.legend.rc:root/init.legend.rc
+    device/htc/legend/files/init.legend.rc:root/init.legend.rc \
+    device/htc/legend/files/ueventd.legend.rc:root/ueventd.legend.rc
 
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libhtc_ril.so \
@@ -59,7 +78,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # For emmc phone storage
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.phone_storage = 0 
+    ro.phone_storage=0
 
 # This is a 512MB device, so 32mb heapsize
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -67,10 +86,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dexopt-data-only=1
-
-# Should make scrolling smoother
-#PRODUCT_PROPERTY_OVERRIDES += \
-#    windowsmgr.max_events_per_sec=60
 
 
 ## (2) Also get non-open-source GSM-specific aspects if available
@@ -132,6 +147,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     librs_jni \
+    copybit.msm7k \
     sensors.legend \
     lights.legend
 
