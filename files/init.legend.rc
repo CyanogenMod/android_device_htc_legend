@@ -33,27 +33,14 @@ on boot
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     chown dhcp dhcp /data/misc/dhcp
 
-    # bluetooth power up/down interface
-    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
-    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
-    chmod 0660 /sys/class/rfkill/rfkill0/state
-    chown bluetooth bluetooth sys/devices/platform/msm_serial_hs.0/serial_lock_cpu
-    chmod 0660 /sys/devices/platform/msm_serial_hs.0/serial_lock_cpu
-
     # set all crashes to bin in /data/btips with a descriptive core filename
     # DEBUG
     write /proc/sys/kernel/core_pattern /data/btips/core_%e_p_%p_s_%s_t_%t
-    
-    chown system system /sys/module/serial/parameters/modem_enabled
-    chown system system /dev/ttyHSUSB0
-    chown system system /dev/smd9
 
     write /sys/module/lowmemorykiller/parameters/minfile 0,0,0,5120,5632,6144
     write /sys/module/lowmemorykiller/parameters/check_filepages 1
 
-    # flashlight
-    chown system camera /sys/devices/platform/flashlight.0/leds/flashlight/brightness
-    chmod 0660 /sys/devices/platform/flashlight.0/leds/flashlight/brightness
+
 
 # compass/accelerometer daemon
 service akmd /system/bin/akmd

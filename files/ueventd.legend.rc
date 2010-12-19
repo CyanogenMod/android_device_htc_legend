@@ -1,0 +1,15 @@
+/dev/akm8973_daemon     0640    compass    system
+/dev/cpu_dma_latency    0660    system     system
+/dev/msm_aac            0660    system     audio
+/dev/smd9               0660    system     system
+/dev/system_bus_freq    0660    system     system
+/dev/ttyHSUSB0          0660    system     system
+
+# bluetooth power up/down interface
+/sys/class/rfkill/rfkill0/type                 0444    bluetooth  bluetooth
+/sys/class/rfkill/rfkill0/state                0660    bluetooth  bluetooth
+/sys/devices/platform/msm_serial_hs_ti.0       0660    bluetooth  bluetooth
+/sys/module/serial/parameters/modem_enabled    0664    system     system
+
+# flashlight
+/sys/devices/platform/flashlight.0/leds/flashlight/brightness    0660    system    camera
