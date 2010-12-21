@@ -15,12 +15,6 @@
 #
 
 #TODO
-#PRODUCT_COPY_FILES += \
-#    device/htc/legend/RomManager.apk:system/app/RomManager.apk \
-#    device/htc/legend/apns-conf.xml:system/etc/apns-conf.xml \
-#    device/htc/legend/libmm-omxcore.so:system/lib \
-#    device/htc/legend/libOmxCore.so:system/lib
-
 PRODUCT_PACKAGES += \
     wpa_supplicant.conf \
     tiwlan.ini \
@@ -148,8 +142,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     librs_jni \
     copybit.msm7k \
+    gralloc.msm7k \
+    gps.legend \
     sensors.legend \
-    lights.legend
+    lights.legend \
+    libOmxCore \
+    libmm-omxcore
 
 PRODUCT_LOCALES += mdpi
 
