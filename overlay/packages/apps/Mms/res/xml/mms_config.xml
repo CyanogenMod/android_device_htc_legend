@@ -22,9 +22,6 @@
 -->
 
 <mms_config version="4">
-    <!-- Maximum message size in bytes for a MMS message -->
-    <int name="maxMessageSize">1048576</int>
-
     <!-- Maximum height for an attached image -->
     <int name="maxImageHeight">1944</int>
 
