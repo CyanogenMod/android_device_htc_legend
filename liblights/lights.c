@@ -157,10 +157,10 @@ set_light_locked(enum lights light, unsigned int status, unsigned int blink)
     }
 
     if (status) {
-        // bugfix: if blink=1 before brightness is set light doesn't blink
+        // bugfix: if blink=255 before brightness is set light doesn't blink
         write_int(blinkFile, 0);
-        write_int(ledFile, 1);
-        if (blink) write_int(blinkFile, 1);
+        write_int(ledFile, 255);
+        if (blink) write_int(blinkFile, 255);
     } else {
         write_int(ledFile, 0);
     }
@@ -285,7 +285,7 @@ const struct hw_module_t HAL_MODULE_INFO_SYM = {
     .version_major = 1,
     .version_minor = 0,
     .id = LIGHTS_HARDWARE_MODULE_ID,
-    .name = "QCT MSM7K lights Module",
-    .author = "Google, Inc.",
+    .name = "Legend lights module",
+    .author = "Google, Inc.; Alexander Hofbauer",
     .methods = &lights_module_methods,
 };
