@@ -136,8 +136,8 @@ PRODUCT_COPY_FILES += \
     device/htc/legend/files/modules/2.6.32.17-cyanogenmod/modules.symbols:system/lib/modules/2.6.32.17-cyanogenmod/modules.symbols \
     device/htc/legend/files/modules/2.6.32.17-cyanogenmod/modules.symbols.bin:system/lib/modules/2.6.32.17-cyanogenmod/modules.symbols.bin
 
-PRODUCT_COPY_FILES += \
-    device/htc/legend/files/hw/gralloc.msm7k.so:/system/lib/hw/gralloc.msm7k.so
+#PRODUCT_COPY_FILES += \
+#    device/htc/legend/files/hw/gralloc.msm7k.so:/system/lib/hw/gralloc.msm7k.so
 
 PRODUCT_PACKAGES += \
     librs_jni \
