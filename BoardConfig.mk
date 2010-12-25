@@ -77,6 +77,4 @@ BOARD_USERDATAIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x0b920000)
 
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_RECOVERY_UI_LIB := librecovery_ui_legend librecovery_ui_htc
-
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
