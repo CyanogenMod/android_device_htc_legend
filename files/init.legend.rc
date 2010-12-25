@@ -40,6 +40,29 @@ on boot
     write /sys/module/lowmemorykiller/parameters/minfile 0,0,0,5120,5632,6144
     write /sys/module/lowmemorykiller/parameters/check_filepages 1
 
+	# bluetooth power up/down interface
+	chown bluetooth:bluetooth /sys/class/rfkill/rfkill0/type
+	chmod 0444                /sys/class/rfkill/rfkill0/type
+	chown bluetooth:bluetooth /sys/class/rfkill/rfkill0/state
+	chmod 0660                /sys/class/rfkill/rfkill0/state
+	chown bluetooth:bluetooth /sys/devices/platform/msm_serial_hs_ti.0
+	chmod 0660                /sys/devices/platform/msm_serial_hs_ti.0
+
+	chmod 0664                /sys/module/serial/parameters/modem_enabled
+	chown system:system       /sys/module/serial/parameters/modem_enabled
+
+	# leds
+	chown system:camera       /sys/devices/platform/flashlight.0/leds/flashlight/brightness
+	chmod 0660                /sys/devices/platform/flashlight.0/leds/flashlight/brightness
+	chown system:system       /sys/devices/platform/leds-microp/leds/amber/brightness
+	chmod 0660                /sys/devices/platform/leds-microp/leds/amber/brightness
+	chown system:system       /sys/devices/platform/leds-microp/leds/amber/blink
+	chmod 0660                /sys/devices/platform/leds-microp/leds/amber/blink
+	chown system:system       /sys/devices/platform/leds-microp/leds/green/brightness
+	chmod 0660                /sys/devices/platform/leds-microp/leds/green/brightness
+	chown system:system       /sys/devices/platform/leds-microp/leds/green/blink
+	chmod 0660                /sys/devices/platform/leds-microp/leds/green/blink
+
 
 
 # compass/accelerometer daemon
