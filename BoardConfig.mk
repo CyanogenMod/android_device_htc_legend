@@ -12,10 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# config.mk
-#
-# Product-specific compile-time definitions.
-#
 
 # WARNING: This line must come *before* including the proprietary
 # variant, so that it gets overwritten by the parent (which goes
@@ -47,11 +43,6 @@ BOARD_NO_RGBX_8888 := true
 BOARD_USES_GENERIC_AUDIO := false
 BOARD_USES_QCOM_LIBS := true
 BOARD_USE_FROYO_LIBCAMERA := true
-
-#BOARD_VENDOR_QCOM_AMSS_VERSION := 4735
-#BOARD_VENDOR_USE_AKMD := akm8973
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := legend
-BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 4735
 
 BOARD_HAVE_BLUETOOTH := true
 
