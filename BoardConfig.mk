@@ -61,10 +61,18 @@ BOARD_EGL_CFG := device/htc/legend/files/egl.cfg
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
 BOARD_KERNEL_BASE := 0x12C00000
 
-BOARD_RECOVERYIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x00460000)
-BOARD_BOOTIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x00280000)
-BOARD_SYSTEMIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x0f000000)
-BOARD_USERDATAIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x0b920000)
+#$ adb shell cat /proc/mtd
+#dev:    size   erasesize  name
+#mtd0: 000a0000 00020000 "misc"
+#mtd1: 00460000 00020000 "recovery"
+#mtd2: 00280000 00020000 "boot"
+#mtd3: 0f000000 00020000 "system"
+#mtd4: 02800000 00020000 "cache"
+#mtd5: 0b920000 00020000 "userdata"
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00460000
+BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00280000
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x0f000000
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x0b920000
 
 BOARD_FLASH_BLOCK_SIZE := 131072
 
