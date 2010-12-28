@@ -14,13 +14,6 @@
      limitations under the License.
 -->
 
-<!-- Version History
-        version 1 - initial version.
-        version 2 - added recipientLimit.
-        version 3 - added min/max recycler values.
-        version 4 - added sms to mms text threshold.
--->
-
 <mms_config version="4">
     <!-- Maximum height for an attached image -->
     <int name="maxImageHeight">1944</int>
