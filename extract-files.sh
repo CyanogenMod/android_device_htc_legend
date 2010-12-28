@@ -55,6 +55,13 @@ lib/libOmxH264Dec.so
 lib/libOmxMpeg4Dec.so
 lib/libOmxVidEnc.so
 lib/liboemcamera.so
+lib/libomx_aacdec_sharedlibrary.so
+lib/libomx_amrdec_sharedlibrary.so
+lib/libomx_amrenc_sharedlibrary.so
+lib/libomx_avcdec_sharedlibrary.so
+lib/libomx_m4vdec_sharedlibrary.so
+lib/libomx_mp3dec_sharedlibrary.so
+lib/libomx_sharedlibrary.so
 lib/libomx_wmadec_sharedlibrary.so
 lib/libomx_wmvdec_sharedlibrary.so
 lib/libpvasfcommon.so
@@ -129,6 +136,13 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/legend/proprietary/lib/libOmxH264Dec.so:system/lib/libOmxH264Dec.so \\
     vendor/htc/legend/proprietary/lib/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \\
     vendor/htc/legend/proprietary/lib/libOmxMpeg4Dec.so:system/lib/libOmxMpeg4Dec.so \\
+    vendor/htc/legend/proprietary/lib/libomx_aacdec_sharedlibrary.so:system/lib/libomx_aacdec_sharedlibrary.so \\
+    vendor/htc/legend/proprietary/lib/libomx_amrdec_sharedlibrary.so:system/lib/libomx_amrdec_sharedlibrary.so \\
+    vendor/htc/legend/proprietary/lib/libomx_amrenc_sharedlibrary.so:system/lib/libomx_amrenc_sharedlibrary.so \\
+    vendor/htc/legend/proprietary/lib/libomx_avcdec_sharedlibrary.so:system/lib/libomx_avcdec_sharedlibrary.so \\
+    vendor/htc/legend/proprietary/lib/libomx_m4vdec_sharedlibrary.so:system/lib/libomx_m4vdec_sharedlibrary.so \\
+    vendor/htc/legend/proprietary/lib/libomx_mp3dec_sharedlibrary.so:system/lib/libomx_mp3dec_sharedlibrary.so \\
+    vendor/htc/legend/proprietary/lib/libomx_sharedlibrary.so:system/lib/libomx_sharedlibrary.so \\
     vendor/htc/legend/proprietary/lib/libomx_wmadec_sharedlibrary.so:system/lib/libomx_wmadec_sharedlibrary.so \\
     vendor/htc/legend/proprietary/lib/libomx_wmvdec_sharedlibrary.so:system/lib/libomx_wmvdec_sharedlibrary.so \\
     vendor/htc/legend/proprietary/lib/libpvasfcommon.so:system/lib/libpvasfcommon.so \\
