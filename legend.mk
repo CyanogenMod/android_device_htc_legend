@@ -45,14 +45,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=160 \
     wifi.interface=tiwlan0 \
     wifi.supplicant_scan_interval=15 \
-    ro.ril.hsxpa=2 \
     ro.ril.def.agps.mode=2 \
-    ro.ril.hsdpa.category=8 \
-    ro.ril.hsupa.category=5 \
-    ro.ril.disable.fd.plmn.prefix=23402,23410,23411 \
-    ro.ril.enable.sdr=0 \
+    ro.ril.ecc.HTC-ELL=92,93,94 \
+    ro.ril.ecc.HTC-WWE=999 \
     ro.ril.enable.a52.HTC-ITA=1 \
     ro.ril.enable.a53.HTC-ITA=1 \
+    ro.ril.hsdpa.category=8 \
+    ro.ril.hsupa.category=5 \
+    ro.ril.hsxpa=2 \
+    ro.ril.disable.fd.plmn.prefix=23402,23410,23411 \
+    ro.ril.enable.sdr=0 \
+    ro.ril.enable.managed.roaming=1 \
+    ro.ril.radio.svn=2 \
     ro.opengles.version=131072
 
 # Default network type.
