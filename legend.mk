@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
 # Kernel Targets
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 ifeq ($(TARGET_KERNEL_CONFIG),)
@@ -153,7 +151,7 @@ PRODUCT_LOCALES += mdpi
 
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 $(call inherit-product, device/htc/common/common.mk)
-$(call inherit-product, build/target/product/full.mk)
+$(call inherit-product, build/target/product/full_base.mk)
 
 PRODUCT_NAME := generic_legend
 PRODUCT_DEVICE := legend
