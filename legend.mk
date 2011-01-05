@@ -16,12 +16,12 @@
 
 # Kernel Targets
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-ifeq ($(TARGET_KERNEL_CONFIG),)
-TARGET_PREBUILT_KERNEL := device/htc/legend/files/kernel
-endif # TARGET_KERNEL_CONFIG
+LOCAL_KERNEL := device/htc/legend/files/kernel
+else
+LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif # TARGET_PREBUILT_KERNEL
 
-PRODUCT_COPY_FILES += $(TARGET_PREBUILT_KERNEL):kernel
+PRODUCT_COPY_FILES += $(LOCAL_KERNEL):kernel
 
 DEVICE_PACKAGE_OVERLAYS := device/htc/legend/overlay
 
