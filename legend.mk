@@ -115,7 +115,6 @@ PRODUCT_COPY_FILES += \
     device/htc/legend/files/modules/tiap_drv.ko:system/lib/modules/tiap_drv.ko
 
 PRODUCT_COPY_FILES += \
-    device/htc/legend/files/modules/2.6.32.17-cyanogenmod/kernel/fs/aufs/aufs.ko:system/lib/modules/2.6.32.17-cyanogenmod/kernel/fs/aufs/aufs.ko \
     device/htc/legend/files/modules/2.6.32.17-cyanogenmod/kernel/fs/cifs/cifs.ko:system/lib/modules/2.6.32.17-cyanogenmod/kernel/fs/cifs/cifs.ko \
     device/htc/legend/files/modules/2.6.32.17-cyanogenmod/kernel/net/ipv6/ipv6.ko:system/lib/modules/2.6.32.17-cyanogenmod/kernel/net/ipv6/ipv6.ko \
     device/htc/legend/files/modules/2.6.32.17-cyanogenmod/modules.alias:system/lib/modules/2.6.32.17-cyanogenmod/modules.alias \
