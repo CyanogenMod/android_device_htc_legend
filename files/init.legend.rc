@@ -32,6 +32,8 @@ on boot
     mkdir /data/misc/wifi/sockets 0770 wifi wifi
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     chown dhcp dhcp /data/misc/dhcp
+    # Copying hostapd.conf (WLAN HotSpot)
+    copy /system/etc/wifi/softap/hostapd.conf /data/misc/wifi/hostapd.conf
 
     # set all crashes to bin in /data/btips with a descriptive core filename
     # DEBUG
@@ -65,7 +67,6 @@ on fs
     chmod 0660                /sys/devices/platform/leds-microp/leds/green/blink
 
 
-
 # compass/accelerometer daemon
 service akmd /system/bin/akmd
     user compass
@@ -74,6 +75,17 @@ service akmd /system/bin/akmd
 service wlan_loader /system/bin/wlan_loader \
     -f /system/etc/wifi/Fw1273_CHIP.bin -e /proc/calibration \
     -i /system/etc/wifi/tiwlan.ini
+    disabled
+    oneshot
+
+# HotSpot Related services
+service wlan_ap_loader /system/bin/tiap_loader \
+    -f /system/etc/wifi/Fw1273_CHIP_AP.bin \
+    -i /system/etc/wifi/softap/tiwlan_ap.ini
+    disabled
+    oneshot
+
+service hostapd /system/bin/hostap -dd /data/misc/wifi/hostapd.conf
     disabled
     oneshot
 
@@ -96,14 +108,6 @@ service hciattach /system/bin/hciattach \
     user bluetooth
     group bluetooth net_bt_admin
     disabled
-
-#btips - 2.22
-service btips /system/bin/btipsd --logfile /data/btips/btips_log.txt -no_android_log
-    socket bluetooth stream 660 bluetooth bluetooth
-    socket dbus_bluetooth stream 660 bluetooth bluetooth
-    group bluetooth net_bt_admin misc
-    disabled # the MCP monitor service is responsible for bringing up the daemon
-    oneshot
 
 # bugreport is triggered by the KEY_BACK and KEY_MENU keycodes
 service bugreport /system/bin/dumpstate -d -v -o /sdcard/bugreports/bugreport

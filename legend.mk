@@ -52,9 +52,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.hsupa.category=5 \
     ro.ril.hsxpa=2 \
     ro.ril.disable.fd.plmn.prefix=23402,23410,23411 \
-    ro.ril.enable.sdr=0 \
-    ro.ril.enable.managed.roaming=1 \
-    ro.ril.radio.svn=2 \
     ro.opengles.version=131072
 
 # Default network type.
@@ -69,6 +66,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # This is a 512MB device, so 32mb heapsize
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapsize=32m
+
+# Enable TI HotSpot
+PRODUCT_PROPERTY_OVERRIDES += \
+    wifi.hotspot.ti=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dexopt-data-only=1
@@ -146,6 +147,14 @@ PRODUCT_PACKAGES += \
     wlan_cu \
     wlan_loader \
     libCustomWifi
+
+#HotSpot
+PRODUCT_PACKAGES += \
+    tiap_loader \
+    tiap_cu \
+    tiwlan_ap.ini \
+    hostap \
+    hostapd.conf
 
 PRODUCT_LOCALES += mdpi
 
