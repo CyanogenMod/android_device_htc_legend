@@ -86,8 +86,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.locationfeatures = 1 \
     ro.setupwizard.mode=OPTIONAL \
     ro.setupwizard.enable_bypass=1 \
-    ro.media.dec.aud.wma.enabled=1 \
-    ro.media.dec.vid.wmv.enabled=1 \
     dalvik.vm.dexopt-flags=m=y \
     net.bt.name=Android \
     ro.config.sync=yes

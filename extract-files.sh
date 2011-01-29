@@ -62,8 +62,6 @@ lib/libomx_avcdec_sharedlibrary.so
 lib/libomx_m4vdec_sharedlibrary.so
 lib/libomx_mp3dec_sharedlibrary.so
 lib/libomx_sharedlibrary.so
-lib/libomx_wmadec_sharedlibrary.so
-lib/libomx_wmvdec_sharedlibrary.so
 lib/libpvasfcommon.so
 lib/libpvasflocalpbreg.so
 lib/libpvasflocalpb.so
@@ -143,8 +141,6 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/legend/proprietary/lib/libomx_m4vdec_sharedlibrary.so:system/lib/libomx_m4vdec_sharedlibrary.so \\
     vendor/htc/legend/proprietary/lib/libomx_mp3dec_sharedlibrary.so:system/lib/libomx_mp3dec_sharedlibrary.so \\
     vendor/htc/legend/proprietary/lib/libomx_sharedlibrary.so:system/lib/libomx_sharedlibrary.so \\
-    vendor/htc/legend/proprietary/lib/libomx_wmadec_sharedlibrary.so:system/lib/libomx_wmadec_sharedlibrary.so \\
-    vendor/htc/legend/proprietary/lib/libomx_wmvdec_sharedlibrary.so:system/lib/libomx_wmvdec_sharedlibrary.so \\
     vendor/htc/legend/proprietary/lib/libpvasfcommon.so:system/lib/libpvasfcommon.so \\
     vendor/htc/legend/proprietary/lib/libpvasflocalpbreg.so:system/lib/libpvasflocalpbreg.so \\
     vendor/htc/legend/proprietary/lib/libpvasflocalpb.so:system/lib/libpvasflocalpb.so
