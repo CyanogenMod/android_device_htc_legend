@@ -5,12 +5,6 @@ on early-init
   write /sys/devices/virtual/net/rmnet0/timeout_suspend 5000000
   write /sys/devices/virtual/net/rmnet0/timeout 18000000
 
-on init
-# btips DDB location
-    mkdir /data/btips 0777 bluetooth bluetooth
-    mkdir /data/btips/TI 0777 bluetooth bluetooth
-    mkdir /data/btips/TI/opp 0777 bluetooth bluetooth
-
 on boot
 # unmap left alt to avoid console switch
     setkey 0x0 0x38 0x0
@@ -35,14 +29,14 @@ on boot
     # Copying hostapd.conf (WLAN HotSpot)
     copy /system/etc/wifi/softap/hostapd.conf /data/misc/wifi/hostapd.conf
 
-    # set all crashes to bin in /data/btips with a descriptive core filename
-    # DEBUG
-    write /proc/sys/kernel/core_pattern /data/btips/core_%e_p_%p_s_%s_t_%t
-
     write /sys/module/lowmemorykiller/parameters/minfile 0,0,0,5120,5632,6144
     write /sys/module/lowmemorykiller/parameters/check_filepages 1
 
-on fs
+    # performance tweaks for flash
+    write /sys/block/mtdblock3/bdi/read_ahead_kb 4
+    write /sys/block/mtdblock4/bdi/read_ahead_kb 4
+    write /sys/block/mtdblock5/bdi/read_ahead_kb 4
+
     # bluetooth power up/down interface
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
     chmod 0444                /sys/class/rfkill/rfkill0/type
