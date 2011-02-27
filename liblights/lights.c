@@ -15,7 +15,7 @@
  */
 
 
-// #define LOG_NDEBUG 0
+//#define LOG_NDEBUG 0
 #define LOG_TAG "lights"
 
 #include <cutils/log.h>
@@ -116,7 +116,6 @@ set_light_backlight(struct light_device_t* dev,
 {
     int err = 0;
     int brightness = rgb_to_brightness(state);
-    //LOGD("set_light_backlight brightness=%d\n", brightness);
     pthread_mutex_lock(&g_lock);
     err = write_int(LCD_FILE, brightness);
     pthread_mutex_unlock(&g_lock);
@@ -139,8 +138,6 @@ set_light_buttons(struct light_device_t* dev,
 static int
 set_light_locked(enum lights light, unsigned int status, unsigned int blink)
 {
-    //LOGD("set_light_locked light=%d, state=%d\n", light, status);
-
     char const* ledFile;
     char const* blinkFile;
 
@@ -160,7 +157,9 @@ set_light_locked(enum lights light, unsigned int status, unsigned int blink)
         // bugfix: if blink=255 before brightness is set light doesn't blink
         write_int(blinkFile, 0);
         write_int(ledFile, 255);
-        if (blink) write_int(blinkFile, 255);
+        if (blink) {
+            write_int(blinkFile, 1);
+        }
     } else {
         write_int(ledFile, 0);
     }
