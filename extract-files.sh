@@ -8,12 +8,14 @@ lib/egl
 "
 
 for DIR in $DIRS; do
-	mkdir -p ../../../vendor/htc/legend/proprietary/$DIR
+    mkdir -p ../../../vendor/htc/legend/proprietary/$DIR
 done
 
 FILES="
 bin/akmd
 
+etc/spn-conf.xml
+etc/voicemail-conf.xml
 etc/firmware/avpr.bts
 etc/firmware/fmc_init_1273.2.bts
 etc/firmware/fm_rx_init_1273.2.bts
@@ -66,7 +68,7 @@ lib/libpvasflocalpb.so
 "
 
 for FILE in $FILES; do
-	adb pull system/$FILE ../../../vendor/htc/legend/proprietary/$FILE
+    adb pull system/$FILE ../../../vendor/htc/legend/proprietary/$FILE
 done
 
 
@@ -93,6 +95,8 @@ PRODUCT_COPY_FILES := \\
 
 PRODUCT_COPY_FILES += \\
     vendor/htc/legend/proprietary/bin/akmd:system/bin/akmd \\
+    vendor/htc/legend/proprietary/etc/spn-conf.xml:system/etc/spn-conf.xml \\
+    vendor/htc/legend/proprietary/etc/voicemail-conf.xml:system/etc/voicemail-conf.xml \\
     vendor/htc/legend/proprietary/etc/firmware/avpr.bts:system/etc/firmware/avpr.bts \\
     vendor/htc/legend/proprietary/etc/firmware/fmc_init_1273.2.bts:system/etc/firmware/fmc_init_1273.2.bts \\
     vendor/htc/legend/proprietary/etc/firmware/fm_rx_init_1273.2.bts:system/etc/firmware/fm_rx_init_1273.2.bts \\

@@ -59,6 +59,8 @@ WIFI_FIRMWARE_LOADER := wlan_loader
 WIFI_EXT_MODULE_PATH := /system/lib/modules/sdio.ko
 WIFI_EXT_MODULE_NAME := sdio
 
+BOARD_USE_NEW_LIBRIL_HTC := true
+
 BOARD_EGL_CFG := device/htc/legend/files/egl.cfg
 
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
