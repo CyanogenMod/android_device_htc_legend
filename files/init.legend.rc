@@ -60,6 +60,11 @@ on boot
     chown system system       /sys/devices/platform/leds-microp/leds/green/blink
     chmod 0660                /sys/devices/platform/leds-microp/leds/green/blink
 
+    # radio
+    chown system radio        /sys/camera_led_status/led_ril_status
+    chmod 0664                /sys/camera_led_status/led_ril_status
+    chown system radio        /sys/module/gpio_event/parameters/phone_call_status
+    chmod 0664                /sys/module/gpio_event/parameters/phone_call_status
 
 # compass/accelerometer daemon
 service akmd /system/bin/akmd
