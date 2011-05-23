@@ -72,7 +72,8 @@ service akmd /system/bin/akmd
     group compass misc input
 
 service wlan_loader /system/bin/wlan_loader \
-    -f /system/etc/wifi/Fw1273_CHIP.bin -e /proc/calibration \
+    -f /system/etc/wifi/Fw1273_CHIP.bin \
+    -e /proc/calibration \
     -i /system/etc/wifi/tiwlan.ini
     disabled
     oneshot
@@ -80,6 +81,7 @@ service wlan_loader /system/bin/wlan_loader \
 # HotSpot Related services
 service wlan_ap_loader /system/bin/tiap_loader \
     -f /system/etc/wifi/Fw1273_CHIP_AP.bin \
+    -e /proc/calibration \
     -i /system/etc/wifi/softap/tiwlan_ap.ini
     disabled
     oneshot
@@ -99,6 +101,10 @@ service wpa_supplicant /system/bin/wpa_supplicant \
     oneshot
 
 service dhcpcd_tiwlan0 /system/bin/dhcpcd -ABKL tiwlan0
+    disabled
+    oneshot
+
+service iprenew_tiwlan0 /system/bin/dhcpcd -n tiwlan0
     disabled
     oneshot
 
