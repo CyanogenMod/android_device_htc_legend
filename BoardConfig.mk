@@ -58,6 +58,9 @@ WIFI_DRIVER_MODULE_NAME := tiwlan_drv
 WIFI_FIRMWARE_LOADER := wlan_loader
 WIFI_EXT_MODULE_PATH := /system/lib/modules/sdio.ko
 WIFI_EXT_MODULE_NAME := sdio
+WIFI_AP_DRIVER_MODULE_NAME := tiap_drv
+WIFI_AP_DRIVER_MODULE_PATH := /system/lib/modules/tiap_drv.ko
+WIFI_AP_FIRMWARE_LOADER := wlan_ap_loader
 
 BOARD_USE_NEW_LIBRIL_HTC := true
 
