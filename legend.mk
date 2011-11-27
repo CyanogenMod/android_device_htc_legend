@@ -67,9 +67,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapsize=32m
 
-# Enable TI HotSpot
+# Enable custom HotSpot
 PRODUCT_PROPERTY_OVERRIDES += \
-    wifi.hotspot.ti=1
+    wifi.hotspot.custom=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dexopt-data-only=1
